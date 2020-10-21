@@ -12,8 +12,12 @@ col2rowchild_df <- child_df <- as.data.frame(t(child_df))
 US_life_expectancy <- col2rowlife_df %>% 
   select(V207)
 
+names(US_life_expectancy) <- "United States"
+
 US_child_mortality <- col2rowchild_df %>% 
   select(V207)
-  
 
+names(US_child_mortality) <- "United States"
+  
+ggplot(data = US_life_expectancy, aes(x=, y= age)) + geom_point()
 
